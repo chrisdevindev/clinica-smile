@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-color:#3f858b;
+    --text-color-light:#ffffff;
+    --body-color:#f5fdfd;
+    --title-color: #0A4B61;
+    --base-color: #47b6c0;
+    --button-hover: #70d5df;
+    --shadow-image-color:#89dce469;
+    --border-color: #e4e4e4;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+body{
+    font: 400 1rem 'DM Sans', sans-serif;
+    color: var(--text-color);
+    background: var(--body-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1{
+    font: 700 1.85rem 'Poppins', sans-serif;
+    color: var(--title-color);
+    -webkit-font-smoothing: auto;
+}
+
+.button{
+    color: var(--text-color-light);
+    background-color: var(--base-color);
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0.26rem;
+    font: 500 1rem 'DM Sans', sans-serif;
+    transition: background 0.3s;
+}
+
+.button:hover{
+    background: var(--button-hover);
+}
+
+.divider-1{
+    height: 2px;
+    background: linear-gradient(
+        270deg,
+        var(--button-hover) 0%,
+        rgba(204, 239, 244, 0.34) 100%
+    );
+}
+
+a{
+    text-decoration: none;
+}
+
+#header{
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--body-color );
+    width: 100%;
+}
+
+nav{
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo{
+    font: 700 1.31rem 'Poppins', sans-serif;
+    color: var(--title-color);
+
+}
+.logo span{
+    color: var(--base-color);
+}
+
+main{
+    margin-top: 4.5rem;
+}
+
+.container{
+    margin: 0 1.5rem;;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section{
+    padding: 5rem 0;
+}
+
+#home{
+    overflow: hidden;
+}
+
+#home .container{
+    margin: 0;
+}
+
+#home .image{
+    position: relative;
+}
+
+#home .image::before{
+    content:'';
+    height: 100%;
+    width: 100%;
+    background: var(--shadow-image-color);
+    position: absolute;
+    top: -16.8%;
+    left: 12%;
+    z-index: 0;
+    border-radius: 0.20rem;
+}
+
+#home .image img{
+    position: relative;
+    right: 2.93rem;
+    border-radius: 0.20rem;
+    
+}
+
+#home .text{
+    margin: 0 1.5rem;
+    text-align: center;
+}
+
+#home .text h1{
+    margin-bottom: 1rem;
+}
+
+#home .text p{
+    margin-bottom: 2rem;
+}
