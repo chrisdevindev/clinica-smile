@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smile</title>
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="assets/icomoon/style.css">
+
   <!-- Style -->
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +24,18 @@
   <header id="header">
     <nav class="container">
       <a class="logo" href="#">Clínica<span>Smile</span></a>
-      <div class="menu">...</div>
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="#home">Início</a></li>
+          <li><a class="title" href="#about">Sobre</a></li>
+          <li><a class="title" href="#services">Serviços</a></li>
+          <li><a class="title" href="#testimonials">Depoimentos</a></li>
+          <li><a class="title" href="#conta">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="icon-menu"></div>
+      <div class="icon-close"></div>
     </nav>
   </header>
 
@@ -34,7 +48,7 @@
             alt="dentist" />
         </div>
         <div class="text">
-          <h1>O seu sorriso é a sua identidade</h1>
+          <h2 class="title">O seu sorriso é a sua identidade</h2>
           <p>
             Uma clínica odontológica em Ocara-CE, especializada em ortondontia
             e lentes de contato deltal.
@@ -46,9 +60,13 @@
 
     <div class="divider-1"></div>
 
-    <div class="section">
-      <div class="container">outra section</div>
-    </div>
+    <section class="section" id="about">
+      <div class="container grid">Sobre</div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container grid">Services</div>
+    </section>
 
 
   </main>

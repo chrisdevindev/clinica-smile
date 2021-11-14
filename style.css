@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+ul{
+    list-style: none;
+}
+
 :root{
     --text-color:#3f858b;
     --text-color-light:#ffffff;
@@ -20,6 +24,9 @@ img{
     height: auto;
 }
 
+
+/* ------ BASE ------------------- */
+
 body{
     font: 400 1rem 'DM Sans', sans-serif;
     color: var(--text-color);
@@ -27,7 +34,7 @@ body{
     -webkit-font-smoothing: antialiased;
 }
 
-h1{
+.title{
     font: 700 1.85rem 'Poppins', sans-serif;
     color: var(--title-color);
     -webkit-font-smoothing: auto;
@@ -75,13 +82,12 @@ a{
     width: 100%;
 }
 
-nav{
-    height: 4.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+
+main{
+    margin-top: calc(4.5rem + 2rem);
 }
+
+/* ------ LOGO ------------------- */
 
 .logo{
     font: 700 1.31rem 'Poppins', sans-serif;
@@ -92,9 +98,82 @@ nav{
     color: var(--base-color);
 }
 
-main{
-    margin-top: 4.5rem;
+
+/* ------ NAVIGATION ------------------- */
+
+nav{
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
+
+nav ul.grid {
+    gap: 4rem;
+}
+
+nav ul li{
+    text-align: center;
+}
+
+nav ul li a {
+    transition: .2s;
+    position: relative;
+}
+
+nav ul li a:hover{
+    /* transform: translateY(-.5rem); */
+    color: var(--base-color);
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--base-color);
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1.5rem;
+
+    transition: width .3s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav .menu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Mostrar menu */
+nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+
+    background: var(--body-color);
+
+    height: 100vh;
+    width: 100vw;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav.show .menu{
+    display: grid;
+    place-content: center;
+}
+
+nav.show ul.grid{
+    gap: 4rem;
+}
+
 
 .container{
     margin: 0 1.5rem;;
@@ -102,7 +181,7 @@ main{
 
 .grid{
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .section{
