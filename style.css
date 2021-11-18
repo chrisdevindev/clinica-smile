@@ -174,6 +174,25 @@ nav.show ul.grid{
     gap: 4rem;
 }
 
+/* toggle menu */
+.toggle{
+    color: var(--base-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav .icon-close {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    right: 1.5rem;
+}
+
+nav.show div.icon-close{
+    visibility: visible;
+    opacity: 1;
+}
 
 .container{
     margin: 0 1.5rem;;
