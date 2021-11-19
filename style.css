@@ -1,307 +1,360 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-:root{
-    --text-color:#3f858b;
-    --text-color-light:#ffffff;
-    --body-color:#f5fdfd;
-    --title-color: #0A4B61;
-    --base-color: #47b6c0;
-    --button-hover: #70d5df;
-    --shadow-image-color:#89dce469;
-    --border-color: #e4e4e4;
+:root {
+  --text-color: #3f858b;
+  --text-color-light: #ffffff;
+  --body-color: #f5fdfd;
+  --title-color: #0a4b61;
+  --base-color: #47b6c0;
+  --button-hover: #70d5df;
+  --shadow-image-color: #89dce469;
+  --border-color: #e4e4e4;
 }
 
-img{
-    width: 100%;
-    height: auto;
+img {
+  width: 100%;
+  height: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* ------ BASE ------------------- */
 
-body{
-    font: 400 1rem 'DM Sans', sans-serif;
-    color: var(--text-color);
-    background: var(--body-color);
-    -webkit-font-smoothing: antialiased;
+body {
+  font: 400 1rem "DM Sans", sans-serif;
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
 }
 
-.title{
-    font: 700 1.85rem 'Poppins', sans-serif;
-    color: var(--title-color);
-    -webkit-font-smoothing: auto;
+.title {
+  font: 700 1.85rem "Poppins", sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
 }
 
-.button{
-    color: var(--text-color-light);
-    background-color: var(--base-color);
-    height: 3.5rem;
-    display: inline-flex;
-    align-items: center;
-    padding: 0 2rem;
-    border-radius: 0.26rem;
-    font: 500 1rem 'DM Sans', sans-serif;
-    transition: background 0.3s;
+.button {
+  color: var(--text-color-light);
+  background-color: var(--base-color);
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 0.26rem;
+  font: 500 1rem "DM Sans", sans-serif;
+  transition: background 0.3s;
 }
 
-.button:hover{
-    background: var(--button-hover);
+.button:hover {
+  background: var(--button-hover);
 }
 
-.divider-1{
-    height: 2px;
-    background: linear-gradient(
-        270deg,
-        var(--button-hover) 0%,
-        rgba(204, 239, 244, 0.34) 100%
-    );
+.divider-1 {
+  height: 2px;
+  background: linear-gradient(
+    270deg,
+    var(--button-hover) 0%,
+    rgba(204, 239, 244, 0.34) 100%
+  );
 }
 
-.divider-2{
-    height: 2px;
-    background: linear-gradient(
-        270deg,
-        rgba(204, 239, 244, 0.34),
-        var(--button-hover)
-    );
+.divider-2 {
+  height: 2px;
+  background: linear-gradient(
+    270deg,
+    rgba(204, 239, 244, 0.34),
+    var(--button-hover)
+  );
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-#header{
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2rem;
-    display: flex;
+#header {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  display: flex;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: var(--body-color );
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+  width: 100%;
+}
+
+#header.scroll{
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
 
-main{
-    margin-top: calc(4.5rem + 2rem);
+
+main {
+  margin-top: calc(4.5rem + 2rem);
 }
 
 /* ------ LOGO ------------------- */
 
-.logo{
-    font: 700 1.31rem 'Poppins', sans-serif;
-    color: var(--title-color);
-
+.logo {
+  font: 700 1.31rem "Poppins", sans-serif;
+  color: var(--title-color);
 }
-.logo span{
-    color: var(--base-color);
+.logo span {
+  color: var(--base-color);
 }
-
 
 /* ------ NAVIGATION ------------------- */
 
-nav{
-    height: 4.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+nav {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 nav ul.grid {
-    gap: 4rem;
+  gap: 4rem;
 }
 
-nav ul li{
-    text-align: center;
+nav ul li {
+  text-align: center;
 }
 
 nav ul li a {
-    transition: .2s;
-    position: relative;
+  transition: 0.2s;
+  position: relative;
 }
 
-nav ul li a:hover{
-    /* transform: translateY(-.5rem); */
-    color: var(--base-color);
+nav ul li a:hover {
+  /* transform: translateY(-.5rem); */
+  color: var(--base-color);
 }
 
 nav ul li a::after {
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: var(--base-color);
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: var(--base-color);
 
-    position: absolute;
+  position: absolute;
 
-    left: 0;
-    bottom: -1.5rem;
+  left: 0;
+  bottom: -1.5rem;
 
-    transition: width .3s;
+  transition: width 0.3s;
 }
 
-nav ul li a:hover::after{
-    width: 100%;
+nav ul li a:hover::after {
+  width: 100%;
 }
 
-nav .menu{
-    opacity: 0;
-    visibility: hidden;
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 /* Mostrar menu */
-nav.show .menu{
-    opacity: 1;
-    visibility: visible;
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
 
-    background: var(--body-color);
+  background: var(--body-color);
 
-    height: 100vh;
-    width: 100vw;
-    
-    position: fixed;
-    top: 0;
-    left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  place-content: center;
 }
 
-nav.show .menu{
-    display: grid;
-    place-content: center;
+
+nav.show .menu ul {
+  display: grid;
 }
 
-nav.show ul.grid{
-    gap: 4rem;
+nav.show ul.grid {
+  gap: 4rem;
 }
 
 /* toggle menu */
-.toggle{
-    color: var(--base-color);
-    font-size: 1.5rem;
-    cursor: pointer;
+.toggle {
+  color: var(--base-color);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 nav .icon-close {
-    visibility: hidden;
-    opacity: 0;
+  visibility: hidden;
+  opacity: 0;
 
-    position: absolute;
-    right: 1.5rem;
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+
+  transition: 0.2s;
 }
 
-nav.show div.icon-close{
-    visibility: visible;
-    opacity: 1;
+nav.show div.icon-close {
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
 }
 
-.container{
-    margin: 0 1.5rem;;
+.container {
+  margin: 0 1.5rem;
 }
 
-.grid{
-    display: grid;
-    gap: 2rem;
+.grid {
+  display: grid;
+  gap: 2rem;
 }
 
-.section{
-    padding: 5rem 0;
+.section {
+  padding: 5rem 0;
 }
 
-.section .title{
-    margin-bottom: 1rem;
+.section .title {
+  margin-bottom: 1rem;
 }
 
-#home{
-    overflow: hidden;
+.section header {
+  margin-bottom: 4rem;
 }
 
-#home .container{
-    margin: 0;
+.section header strong {
+  color: var(--base-color);
 }
 
-#home .image{
-    position: relative;
+#home {
+  overflow: hidden;
 }
 
-#home .image::before{
-    content:'';
-    height: 100%;
-    width: 100%;
-    background: var(--shadow-image-color);
-    position: absolute;
-    top: -16.8%;
-    left: 12%;
-    z-index: 0;
-    border-radius: 0.20rem;
+#home .container {
+  margin: 0;
 }
 
-#home .image img{
-    position: relative;
-    right: 2.93rem;    
+#home .image {
+  position: relative;
+}
+
+#home .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--shadow-image-color);
+  position: absolute;
+  top: -16.8%;
+  left: 12%;
+  z-index: 0;
+  border-radius: 0.2rem;
+}
+
+#home .image img {
+  position: relative;
+  right: 2.93rem;
 }
 
 #home .image img,
-#home .image::before{
-    border-radius: 0.25rem;
+#home .image::before {
+  border-radius: 0.25rem;
 }
 
-#home .text{
-    margin: 0 1.5rem;
-    text-align: center;
+#home .text {
+  margin: 0 1.5rem;
+  text-align: center;
 }
 
-#home .text h1{
-    margin-bottom: 1rem;
+#home .text h1 {
+  margin-bottom: 1rem;
 }
 
-#home .text p{
-    margin-bottom: 2rem;
+#home .text p {
+  margin-bottom: 2rem;
 }
 
 /* ------ ABOUT ------------------- */
 
-#about{
-    background: white;
+#about {
+  background: white;
 }
 
-#about .container{
-    margin: 0;
+#about .container {
+  margin: 0;
 }
 
-#about .image{
-    position: relative;
+#about .image {
+  position: relative;
 }
 
-#about .image::before{
-    content:'';
-    height: 100%;
-    width: 100%;
-    background: var(--shadow-image-color);
-    position: absolute;
-    top: -8.3%;
-    left: -33%;
-    z-index: 0;
-    border-radius: 0.20rem;
+#about .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--shadow-image-color);
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+  border-radius: 0.2rem;
 }
 
-#about .image img{
-    position: relative;
+#about .image img {
+  position: relative;
 }
 
 #about .image img,
-#about .image::before{
-    border-radius: 0.25rem;
+#about .image::before {
+  border-radius: 0.25rem;
 }
 
-#about .text{
-    margin: 0 1.5rem;
+#about .text {
+  margin: 0 1.5rem;
+}
+
+/* ------ ABOUT ------------------- */
+
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0;
+  text-align: center;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--base-color);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75;
 }
