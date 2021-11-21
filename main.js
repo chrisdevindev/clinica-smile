@@ -7,6 +7,8 @@ for (const element of toggle) {
     })
 }
 
+
+
 const links = document.querySelectorAll("nav ul li a")
 
 for (const link of links) {
@@ -14,6 +16,9 @@ for (const link of links) {
         nav.classList.remove('show')
     })
 }
+
+
+
 
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
@@ -25,4 +30,14 @@ window.addEventListener('scroll', () => {
     else{
         header.classList.remove('scroll')
     }
+})
+
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    keyboard: true,
+
 })
