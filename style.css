@@ -330,6 +330,7 @@ nav.show div.icon-close {
 }
 
 #about .image img {
+  width: 460px;
   position: relative;
 }
 
