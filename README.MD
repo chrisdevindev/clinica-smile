@@ -12,7 +12,7 @@
 <p align="center" style="margin-bottom:20px">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-demo">Demo</a>
+  <a href="#information_source-demo">Demo</a>
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com)
 
 ## :information_source: Demo
 
-To clone and run this application, you'll need [Git](https://ccastro01.github.io/clinica-smile)
+To access this application, click [here](https://ccastro01.github.io/clinica-smile)
 
 
 
